@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #057883;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    -moz-box-shadow: 0px 0px 14px #12c2c4;
+    -webkit-box-shadow: 0px 0px 14px #12c2c4;
+    box-shadow: 0px 0px 14px #12c2c4;
+    margin: 15px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.input {
+    color: white;
+    border: 2px solid;
+    padding: 5px;
+    opacity: 0.5;
+}
+
+.input2 {
+    color: white;
+    border: 2px solid;
+    padding: 5px;
+}
+
+.datecalc {
+    display: flex;
+    position: fixed;
+    z-index: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -350px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: lightgrey;
+    color: white;
+}
+
+.datecalc::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #BFE2FF;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#BFE2FF, #BFE2FF), linear-gradient(#337AB7, #337AB7), linear-gradient(#BFE2FF, #BFE2FF), linear-gradient(#337AB7, #337AB7);
+    animation: anim-datecalc 4s linear infinite;
+}
+
+.datecalc::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: white;
+    border-radius: 5px;
+}
+
+@keyframes anim-datecalc {
+    100% {
+        transform: rotate(1turn);
+    }
+}
